@@ -1,0 +1,491 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sotobosque, café de sombra | Concepto de WebsoriaStudio</title>
+  <meta name="description" content="Sotobosque es una cafetería conceptual: café cultivado bajo sombra, tostado cada semana y servido en barra lenta. Carta, espacio, horarios y reservas de demostración. Diseño de WebsoriaStudio.">
+  <meta name="theme-color" content="#14301f">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es">
+  <meta property="og:title" content="Sotobosque, café de sombra">
+  <meta property="og:description" content="Cafetería conceptual diseñada por WebsoriaStudio: café de sombra, tueste semanal y barra lenta.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1763473821509-9a383b480844?auto=format&fit=crop&w=1200&h=630&q=70">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="preload" as="image" fetchpriority="high"
+        href="https://images.unsplash.com/photo-1763473821509-9a383b480844?auto=format&fit=crop&w=900&h=900&q=70"
+        imagesrcset="https://images.unsplash.com/photo-1763473821509-9a383b480844?auto=format&fit=crop&w=560&h=560&q=70 560w, https://images.unsplash.com/photo-1763473821509-9a383b480844?auto=format&fit=crop&w=900&h=900&q=70 900w"
+        imagesizes="(min-width: 900px) 46vw, 78vw">
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil:opsz,wght@10..72,600..900&family=Schibsted+Grotesk:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+  <a class="skip" href="#contenido">Saltar al contenido</a>
+
+  <!-- Grano reutilizable -->
+  <svg width="0" height="0" class="defs" aria-hidden="true" focusable="false">
+    <defs>
+      <radialGradient id="g-grano" cx="35%" cy="28%" r="80%">
+        <stop offset="0" stop-color="#8a5a34"/>
+        <stop offset=".55" stop-color="#4f2c17"/>
+        <stop offset="1" stop-color="#2a150a"/>
+      </radialGradient>
+      <symbol id="grano" viewBox="0 0 60 84">
+        <ellipse cx="30" cy="42" rx="27" ry="39" fill="url(#g-grano)"/>
+        <path d="M31 5c-13 16 12 26 0 39s11 22-1 35" fill="none" stroke="#1c0d05" stroke-width="4.5" stroke-linecap="round"/>
+        <path d="M34 6c-11 16 13 26 1 39" fill="none" stroke="#a87548" stroke-width="1.2" stroke-linecap="round" opacity=".5"/>
+      </symbol>
+      <radialGradient id="g-verde" cx="35%" cy="28%" r="80%">
+        <stop offset="0" stop-color="#d3d8ae"/>
+        <stop offset=".55" stop-color="#9fa97c"/>
+        <stop offset="1" stop-color="#5f6b48"/>
+      </radialGradient>
+      <symbol id="grano-verde" viewBox="0 0 60 84">
+        <ellipse cx="30" cy="42" rx="27" ry="39" fill="url(#g-verde)"/>
+        <path d="M31 5c-13 16 12 26 0 39s11 22-1 35" fill="none" stroke="#4c5638" stroke-width="4.5" stroke-linecap="round"/>
+      </symbol>
+      <radialGradient id="g-verde" cx="35%" cy="28%" r="80%">
+        <stop offset="0" stop-color="#d3d8ae"/>
+        <stop offset=".55" stop-color="#9fa97c"/>
+        <stop offset="1" stop-color="#5f6b48"/>
+      </radialGradient>
+      <symbol id="grano-verde" viewBox="0 0 60 84">
+        <ellipse cx="30" cy="42" rx="27" ry="39" fill="url(#g-verde)"/>
+        <path d="M31 5c-13 16 12 26 0 39s11 22-1 35" fill="none" stroke="#4c5638" stroke-width="4.5" stroke-linecap="round"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <header class="nav" data-nav>
+    <a class="marca" href="#inicio" aria-label="Sotobosque, inicio">
+      <svg viewBox="0 0 60 84" aria-hidden="true"><use href="#grano"/></svg>
+      <span>Sotobosque</span>
+    </a>
+    <nav class="nav-links" aria-label="Secciones">
+      <a href="#propuesta">Propuesta</a>
+      <a href="#carta">Carta</a>
+      <a href="#proceso">Del grano a la taza</a>
+      <a href="#espacio">El espacio</a>
+      <a href="#visita">Visita</a>
+    </nav>
+    <a class="btn btn-nav" href="#reserva">Reservar mesa</a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu-movil" data-menu-btn>
+      <span class="menu-ico" aria-hidden="true"><i></i><i></i></span>
+      <span data-menu-label>Menú</span>
+    </button>
+  </header>
+
+  <div class="menu-movil" id="menu-movil" data-menu hidden>
+    <nav aria-label="Secciones (móvil)">
+      <a href="#propuesta">Propuesta</a>
+      <a href="#carta">Carta</a>
+      <a href="#proceso">Del grano a la taza</a>
+      <a href="#espacio">El espacio</a>
+      <a href="#visita">Visita</a>
+      <a href="#reserva">Reservar mesa</a>
+    </nav>
+    <p>Calle del Almendro 14, Barrio Jardín<br><small>Dirección de ejemplo</small></p>
+  </div>
+
+  <main id="contenido">
+
+    <!-- PORTADA -->
+    <section class="hero" id="inicio" data-hero>
+      <div class="hero-escena" aria-hidden="true">
+        <div class="chorro"></div>
+        <div class="taza">
+          <img
+            src="https://images.unsplash.com/photo-1763473821509-9a383b480844?auto=format&fit=crop&w=900&h=900&q=70"
+            srcset="https://images.unsplash.com/photo-1763473821509-9a383b480844?auto=format&fit=crop&w=560&h=560&q=70 560w, https://images.unsplash.com/photo-1763473821509-9a383b480844?auto=format&fit=crop&w=900&h=900&q=70 900w"
+            sizes="(min-width: 900px) 46vw, 78vw"
+            width="900" height="900" alt="" fetchpriority="high" decoding="async">
+        </div>
+        <svg class="vapor" viewBox="0 0 200 260" fill="none">
+          <path d="M70 250c-30-40 30-60 0-110s25-70 5-120"/>
+          <path d="M105 255c-28-45 32-70 2-120s22-70 0-125"/>
+          <path d="M138 250c-26-42 28-62 0-112s20-66 2-116"/>
+        </svg>
+        <span class="grano g1"><span><svg viewBox="0 0 60 84"><use href="#grano"/></svg></span></span>
+        <span class="grano g2"><span><svg viewBox="0 0 60 84"><use href="#grano"/></svg></span></span>
+        <span class="grano g3"><span><svg viewBox="0 0 60 84"><use href="#grano"/></svg></span></span>
+        <span class="grano g4"><span><svg viewBox="0 0 60 84"><use href="#grano"/></svg></span></span>
+        <span class="grano g5"><span><svg viewBox="0 0 60 84"><use href="#grano"/></svg></span></span>
+        <span class="grano g6"><span><svg viewBox="0 0 60 84"><use href="#grano"/></svg></span></span>
+        <span class="grano g7"><span><svg viewBox="0 0 60 84"><use href="#grano"/></svg></span></span>
+      </div>
+
+      <div class="hero-texto">
+        <h1>
+          <span class="linea"><span>Café de sombra,</span></span>
+          <span class="linea"><span>servido sin prisa</span></span>
+        </h1>
+        <div class="hero-pie">
+          <p>Granos cultivados bajo árboles, tostados aquí cada martes y preparados frente a ti, taza por taza.</p>
+          <div class="hero-acciones">
+            <a class="btn btn-crema" href="#reserva">Reservar mesa</a>
+            <a class="btn btn-linea" href="#carta">Ver la carta</a>
+          </div>
+        </div>
+      </div>
+      <p class="aviso-concepto">Proyecto conceptual de WebsoriaStudio. Sotobosque es una marca ficticia.</p>
+    </section>
+
+    <!-- PROPUESTA: escena inmersiva -->
+    <section class="propuesta" id="propuesta">
+      <div class="ancho">
+        <h2 class="visually-hidden">Nuestra propuesta</h2>
+        <p class="manifiesto" data-palabras>El café crece mejor a la sombra. Madura despacio, bajo otros árboles, y esa calma se nota en la taza. Aquí lo tostamos en lotes pequeños y lo servimos igual: sin atajos.</p>
+      </div>
+
+      <div class="escena" data-escena>
+        <div class="escena-fija">
+          <div class="esc-fondo" aria-hidden="true">
+            <img class="esc-atm atm-1" src="https://images.unsplash.com/photo-1586095516671-d085ff58cdd4?auto=format&fit=crop&w=480&h=320&q=50" alt="" loading="lazy" decoding="async">
+            <img class="esc-atm atm-2" src="https://images.unsplash.com/photo-1770199015377-73c4d0c78138?auto=format&fit=crop&w=480&h=320&q=50" alt="" loading="lazy" decoding="async">
+            <img class="esc-atm atm-3" src="https://images.unsplash.com/photo-1736813132132-7cd457c12ea6?auto=format&fit=crop&w=480&h=320&q=50" alt="" loading="lazy" decoding="async">
+            <div class="esc-luz luz-verde"></div>
+            <div class="esc-luz luz-ambar"></div>
+            <div class="esc-haz"></div>
+            <div class="esc-ruido"></div>
+          </div>
+
+          <div class="esc-capas" aria-hidden="true">
+            <svg class="esc-hoja" data-hoja viewBox="0 0 120 100"><path d="M4 50C30 4 92 4 116 50 92 96 30 96 4 50Z" fill="#1c4631"/><path d="M8 50h104" stroke="#0f2a1c" stroke-width="3"/></svg>
+            <svg class="esc-hoja" data-hoja viewBox="0 0 120 100"><path d="M4 50C30 4 92 4 116 50 92 96 30 96 4 50Z" fill="#245a3e"/><path d="M8 50h104" stroke="#12301f" stroke-width="3"/></svg>
+            <svg class="esc-hoja" data-hoja viewBox="0 0 120 100"><path d="M4 50C30 4 92 4 116 50 92 96 30 96 4 50Z" fill="#173b29"/><path d="M8 50h104" stroke="#0c2217" stroke-width="3"/></svg>
+
+            <div class="esc-rama" data-capa="rama">
+              <img src="https://images.unsplash.com/photo-1586095516671-d085ff58cdd4?auto=format&fit=crop&w=800&h=1000&q=70"
+                   srcset="https://images.unsplash.com/photo-1586095516671-d085ff58cdd4?auto=format&fit=crop&w=480&h=600&q=70 480w, https://images.unsplash.com/photo-1586095516671-d085ff58cdd4?auto=format&fit=crop&w=800&h=1000&q=70 800w"
+                   sizes="(min-width: 900px) 34vw, 70vw" width="800" height="1000" alt="" loading="lazy" decoding="async">
+            </div>
+            <div class="esc-brasa" data-capa="brasa"></div>
+            <div class="esc-granos" data-granos></div>
+            <div class="esc-heroe" data-capa="heroe">
+              <svg viewBox="0 0 60 84"><use href="#grano-verde"/></svg>
+              <svg viewBox="0 0 60 84" data-tostado><use href="#grano"/></svg>
+            </div>
+            <p class="esc-temp" data-capa="temp"></p>
+            <div class="esc-filtro" data-capa="filtro">
+              <img src="https://images.unsplash.com/photo-1759259639356-7c6e74eed1ec?auto=format&fit=crop&crop=focalpoint&fp-x=.66&fp-y=.6&fp-z=1.7&w=640&h=640&q=70" width="640" height="640" alt="" loading="lazy" decoding="async">
+            </div>
+            <canvas class="esc-polvo" data-capa="polvo"></canvas>
+            <div class="esc-taza" data-capa="taza">
+              <svg class="esc-vapor" viewBox="0 0 200 260" fill="none">
+                <path d="M70 250c-30-40 30-60 0-110s25-70 5-120"/>
+                <path d="M105 255c-28-45 32-70 2-120s22-70 0-125"/>
+                <path d="M138 250c-26-42 28-62 0-112s20-66 2-116"/>
+              </svg>
+              <svg class="esc-vaso" viewBox="0 0 300 260">
+                <defs>
+                  <linearGradient id="v-cafe" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6a3716"/><stop offset=".5" stop-color="#3a1a09"/><stop offset="1" stop-color="#190a03"/></linearGradient>
+                  <linearGradient id="v-brillo" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff4e1" stop-opacity=".28"/><stop offset=".22" stop-color="#fff4e1" stop-opacity="0"/><stop offset=".8" stop-color="#fff4e1" stop-opacity="0"/><stop offset="1" stop-color="#fff4e1" stop-opacity=".16"/></linearGradient>
+                  <radialGradient id="v-plato" cx="50%" cy="30%" r="70%"><stop offset="0" stop-color="#4a3222"/><stop offset="1" stop-color="#1a0f08"/></radialGradient>
+                  <clipPath id="v-clip"><path d="M52 40 68 196q2 20 24 20h116q22 0 24-20L248 40Z"/></clipPath>
+                </defs>
+                <ellipse cx="150" cy="238" rx="120" ry="12" fill="#000" opacity=".45"/>
+                <ellipse cx="150" cy="224" rx="142" ry="14" fill="url(#v-plato)" stroke="rgba(239,230,208,.3)" stroke-width="1.5"/>
+                <path d="M52 40 68 196q2 20 24 20h116q22 0 24-20L248 40Z" fill="rgba(255,244,225,.07)"/>
+                <g clip-path="url(#v-clip)">
+                  <rect data-nivel x="40" y="216" width="220" height="0" fill="url(#v-cafe)"/>
+                  <ellipse data-crema cx="150" cy="216" rx="80" ry="6" fill="#c98c4c" opacity="0"/>
+                </g>
+                <path d="M52 40 68 196q2 20 24 20h116q22 0 24-20L248 40Z" fill="url(#v-brillo)" stroke="rgba(255,244,225,.62)" stroke-width="2.5" stroke-linejoin="round"/>
+                <ellipse cx="150" cy="40" rx="98" ry="7" fill="none" stroke="rgba(255,244,225,.55)" stroke-width="2"/>
+                <path d="M68 56 80 186" stroke="rgba(255,244,225,.3)" stroke-width="5" stroke-linecap="round"/>
+              </svg>
+            </div>
+          </div>
+
+          <ol class="esc-textos" data-textos>
+            <li>
+              <h3>Café de sombra</h3>
+              <p>Crece despacio, bajo otros árboles.</p>
+            </li>
+            <li>
+              <h3>Tueste en casa</h3>
+              <p>Lotes pequeños. Cada martes.</p>
+            </li>
+            <li>
+              <h3>Barra lenta</h3>
+              <p>Molido al pedirlo. Filtrado frente a ti.</p>
+            </li>
+            <li class="esc-final">
+              <h3>Cuatro minutos y una taza</h3>
+              <p><a class="btn btn-crema" href="#carta">Ver la carta</a></p>
+            </li>
+          </ol>
+
+          <ol class="esc-marcas" aria-hidden="true" data-marcas>
+            <li><span>Sombra</span><i></i></li>
+            <li><span>Tueste</span><i></i></li>
+            <li><span>Barra</span><i></i></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- CARTA -->
+    <section class="carta" id="carta" data-carta>
+      <div class="carta-fondo" aria-hidden="true">
+        <span class="cf-grano c1"><svg viewBox="0 0 60 84"><use href="#grano"/></svg></span>
+        <span class="cf-grano c2"><svg viewBox="0 0 60 84"><use href="#grano"/></svg></span>
+        <span class="cf-grano c3"><svg viewBox="0 0 60 84"><use href="#grano"/></svg></span>
+      </div>
+      <div class="ancho carta-rejilla">
+        <div class="carta-col">
+          <h2>La carta</h2>
+
+          <div class="ct-tabs" role="tablist" aria-label="Categorías de la carta" data-tabs>
+            <span class="ct-ind" aria-hidden="true" data-ind></span>
+            <button role="tab" id="tab-caliente" aria-controls="panel-carta" aria-selected="true" data-cat="caliente">Café</button>
+            <button role="tab" id="tab-frio" aria-controls="panel-carta" aria-selected="false" tabindex="-1" data-cat="frio">Fríos</button>
+            <button role="tab" id="tab-sincafe" aria-controls="panel-carta" aria-selected="false" tabindex="-1" data-cat="sincafe">Sin café</button>
+            <button role="tab" id="tab-horno" aria-controls="panel-carta" aria-selected="false" tabindex="-1" data-cat="horno">Del horno</button>
+          </div>
+
+          <div id="panel-carta" role="tabpanel" aria-labelledby="tab-caliente" data-panel>
+            <ul class="ct-lista" data-lista></ul>
+            <noscript><p>Activa JavaScript para explorar la carta.</p></noscript>
+          </div>
+          <p class="ct-aviso">Nombres y precios demostrativos.</p>
+        </div>
+
+        <div class="destacado" data-destacado>
+          <div class="dest-anillo" aria-hidden="true"></div>
+          <div class="dest-plato" data-plato></div>
+          <p class="dest-precio" data-dprecio aria-hidden="true"></p>
+          <div class="dest-info" aria-hidden="true">
+            <p class="dest-nombre" data-dnombre></p>
+            <p class="dest-desc" data-ddesc></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESO -->
+    <section class="proceso" id="proceso" data-proceso>
+      <div class="proceso-fijo">
+        <div class="proceso-cabecera">
+          <h2>Del grano a la taza</h2>
+          <p class="proceso-pista">Sigue bajando: el grano hace el recorrido contigo.</p>
+        </div>
+
+        <div class="proceso-lienzo">
+          <canvas data-lienzo width="600" height="600" role="img" aria-label="Animación: una cereza de café se convierte en grano, se tuesta, se muele, se filtra y llega a la taza."></canvas>
+        </div>
+
+        <ol class="proceso-pasos" data-pasos>
+          <li class="activo">
+            <span class="paso-num">1</span>
+            <h3>Cosecha</h3>
+            <p>El café es la semilla de una fruta. Bajo sombra madura más despacio y se recoge a mano, solo cuando está roja.</p>
+          </li>
+          <li>
+            <span class="paso-num">2</span>
+            <h3>Tueste</h3>
+            <p>Unos doce minutos en el tambor. El grano pasa de verde a canela y de canela a castaño; lo sacamos antes de que amargue.</p>
+          </li>
+          <li>
+            <span class="paso-num">3</span>
+            <h3>Molienda</h3>
+            <p>El café molido pierde aroma en minutos. Por eso el molino suena con cada pedido y no antes.</p>
+          </li>
+          <li>
+            <span class="paso-num">4</span>
+            <h3>Extracción</h3>
+            <p>Quince gramos de café, 250 de agua a 93 °C y un vertido en espiral. El goteo hace el resto.</p>
+          </li>
+          <li>
+            <span class="paso-num">5</span>
+            <h3>Taza</h3>
+            <p>Se sirve en taza templada. Te sugerimos probarlo primero solo, sin azúcar.</p>
+          </li>
+        </ol>
+
+        <div class="proceso-ruta" data-ruta>
+          <div class="ruta-linea" aria-hidden="true"><i data-ruta-fill></i></div>
+          <div class="ruta-botones">
+            <button type="button" data-ir="0" aria-current="step">Cosecha</button>
+            <button type="button" data-ir="1">Tueste</button>
+            <button type="button" data-ir="2">Molienda</button>
+            <button type="button" data-ir="3">Extracción</button>
+            <button type="button" data-ir="4">Taza</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ESPACIO -->
+    <section class="espacio" id="espacio" data-espacio>
+      <div class="ancho espacio-cabecera">
+        <h2>El espacio</h2>
+        <p>Madera, plantas y luz de tarde. Un local pensado para quedarse: distintas mesas para distintos ratos.</p>
+      </div>
+
+      <div class="tira" data-tira tabindex="0" role="group" aria-label="Galería del espacio">
+        <div class="tira-pista" data-tira-pista>
+          <figure class="t-ancha">
+            <img src="https://images.unsplash.com/photo-1738323569089-9cde1c891a54?auto=format&fit=crop&w=1100&h=825&q=70"
+                 srcset="https://images.unsplash.com/photo-1738323569089-9cde1c891a54?auto=format&fit=crop&w=640&h=480&q=70 640w, https://images.unsplash.com/photo-1738323569089-9cde1c891a54?auto=format&fit=crop&w=1100&h=825&q=70 1100w"
+                 sizes="(min-width: 900px) 46vw, 84vw" width="1100" height="825" loading="lazy" decoding="async"
+                 alt="Barra de madera de una cafetería rodeada de plantas en maceta">
+            <figcaption><strong>Para empezar el día</strong> La barra abre a las 7:30. Café rápido de pie o filtrado con calma.</figcaption>
+          </figure>
+          <figure class="t-alta">
+            <img src="https://images.unsplash.com/photo-1588253137728-1e4dd0fe9a93?auto=format&fit=crop&w=720&h=960&q=70"
+                 srcset="https://images.unsplash.com/photo-1588253137728-1e4dd0fe9a93?auto=format&fit=crop&w=480&h=640&q=70 480w, https://images.unsplash.com/photo-1588253137728-1e4dd0fe9a93?auto=format&fit=crop&w=720&h=960&q=70 720w"
+                 sizes="(min-width: 900px) 28vw, 70vw" width="720" height="960" loading="lazy" decoding="async"
+                 alt="Mesa alta junto a la pared con taburetes y plantas colgantes">
+            <figcaption><strong>Para trabajar un rato</strong> Mesas altas con enchufes y wifi. Entre semana, sin límite de tiempo.</figcaption>
+          </figure>
+          <figure class="t-ancha">
+            <img src="https://images.unsplash.com/photo-1714328101501-3594de6cb80f?auto=format&fit=crop&w=1100&h=825&q=70"
+                 srcset="https://images.unsplash.com/photo-1714328101501-3594de6cb80f?auto=format&fit=crop&w=640&h=480&q=70 640w, https://images.unsplash.com/photo-1714328101501-3594de6cb80f?auto=format&fit=crop&w=1100&h=825&q=70 1100w"
+                 sizes="(min-width: 900px) 46vw, 84vw" width="1100" height="825" loading="lazy" decoding="async"
+                 alt="Salón con mesas y sillas iluminado por la luz cálida del atardecer">
+            <figcaption><strong>Para alargar la sobremesa</strong> El salón recibe la luz de la tarde. Buen sitio para la segunda taza.</figcaption>
+          </figure>
+          <figure class="t-alta">
+            <img src="https://images.unsplash.com/photo-1731909997813-f3061fe69686?auto=format&fit=crop&w=720&h=960&q=70"
+                 srcset="https://images.unsplash.com/photo-1731909997813-f3061fe69686?auto=format&fit=crop&w=480&h=640&q=70 480w, https://images.unsplash.com/photo-1731909997813-f3061fe69686?auto=format&fit=crop&w=720&h=960&q=70 720w"
+                 sizes="(min-width: 900px) 28vw, 70vw" width="720" height="960" loading="lazy" decoding="async"
+                 alt="Patio con mesa, taburetes y abundante vegetación">
+            <figcaption><strong>Para aprender</strong> Los sábados a las 11:00 hay cata abierta en el patio. Plazas limitadas.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- VISITA + RESERVA -->
+    <section class="visita" id="visita">
+      <div class="ancho visita-rejilla">
+        <div class="visita-datos">
+          <h2>Ven a vernos</h2>
+          <p class="etiqueta-ejemplo">Datos de ejemplo: la cafetería no existe.</p>
+
+          <dl class="datos">
+            <div>
+              <dt>Dónde</dt>
+              <dd>Calle del Almendro 14<br>Barrio Jardín</dd>
+            </div>
+            <div>
+              <dt>Contacto</dt>
+              <dd>hola@sotobosque.example<br>+00 000 000 000<br>Instagram: @sotobosque.ejemplo</dd>
+            </div>
+          </dl>
+
+          <h3>Horario</h3>
+          <table class="horario" data-horario>
+            <caption class="visually-hidden">Horario de apertura de ejemplo</caption>
+            <tbody>
+              <tr data-dias="1,2,3,4,5"><th scope="row">Lunes a viernes</th><td>7:30 – 19:00</td></tr>
+              <tr data-dias="6"><th scope="row">Sábado</th><td>8:30 – 20:00</td></tr>
+              <tr data-dias="0"><th scope="row">Domingo</th><td>9:00 – 14:00</td></tr>
+            </tbody>
+          </table>
+          <p class="horario-nota">Cata abierta: sábados a las 11:00.</p>
+        </div>
+
+        <div class="reserva" id="reserva">
+          <h2>Reserva o pregunta</h2>
+          <p class="reserva-intro">Para grupos, catas o cualquier duda. <strong>Formulario de demostración:</strong> valida los datos pero no envía ni guarda nada.</p>
+
+          <form class="form" novalidate data-form>
+            <fieldset class="tipo">
+              <legend>¿Qué necesitas?</legend>
+              <label><input type="radio" name="tipo" value="Reserva" checked> <span>Reservar mesa</span></label>
+              <label><input type="radio" name="tipo" value="Consulta"> <span>Hacer una consulta</span></label>
+            </fieldset>
+
+            <div class="campo">
+              <label for="f-nombre">Nombre</label>
+              <input id="f-nombre" name="nombre" type="text" autocomplete="name" required minlength="2" aria-describedby="e-nombre">
+              <p class="error" id="e-nombre" hidden></p>
+            </div>
+            <div class="campo">
+              <label for="f-correo">Correo electrónico</label>
+              <input id="f-correo" name="correo" type="email" autocomplete="email" required aria-describedby="e-correo">
+              <p class="error" id="e-correo" hidden></p>
+            </div>
+
+            <div class="fila" data-solo-reserva>
+              <div class="campo">
+                <label for="f-fecha">Fecha</label>
+                <input id="f-fecha" name="fecha" type="date" required aria-describedby="e-fecha">
+                <p class="error" id="e-fecha" hidden></p>
+              </div>
+              <div class="campo">
+                <label for="f-hora">Hora</label>
+                <select id="f-hora" name="hora" required aria-describedby="e-hora">
+                  <option value="">Elige una hora</option>
+                  <option>8:00</option><option>9:00</option><option>10:00</option><option>11:00</option>
+                  <option>12:00</option><option>13:00</option><option>16:00</option><option>17:00</option><option>18:00</option>
+                </select>
+                <p class="error" id="e-hora" hidden></p>
+              </div>
+              <div class="campo campo-personas">
+                <label for="f-personas">Personas</label>
+                <div class="contador">
+                  <button type="button" data-paso="-1" aria-label="Una persona menos">−</button>
+                  <input id="f-personas" name="personas" type="number" inputmode="numeric" min="1" max="8" value="2" required aria-describedby="e-personas">
+                  <button type="button" data-paso="1" aria-label="Una persona más">+</button>
+                </div>
+                <p class="error" id="e-personas" hidden></p>
+              </div>
+            </div>
+
+            <div class="campo">
+              <label for="f-mensaje"><span data-mensaje-label>Mensaje (opcional)</span></label>
+              <textarea id="f-mensaje" name="mensaje" rows="3" aria-describedby="e-mensaje"></textarea>
+              <p class="error" id="e-mensaje" hidden></p>
+            </div>
+
+            <button class="btn btn-crema btn-enviar" type="submit">Probar el formulario</button>
+            <div class="form-estado" role="status" aria-live="polite" data-estado tabindex="-1"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <div class="ancho">
+      <p class="pie-marca" aria-hidden="true">Sotobosque</p>
+      <div class="pie-rejilla">
+        <nav aria-label="Pie de página">
+          <h2>Secciones</h2>
+          <ul>
+            <li><a href="#propuesta">Propuesta</a></li>
+            <li><a href="#carta">Carta</a></li>
+            <li><a href="#proceso">Del grano a la taza</a></li>
+            <li><a href="#espacio">El espacio</a></li>
+            <li><a href="#visita">Visita y horario</a></li>
+            <li><a href="#reserva">Reserva o consulta</a></li>
+          </ul>
+        </nav>
+        <div>
+          <h2>Contacto de ejemplo</h2>
+          <p>Calle del Almendro 14, Barrio Jardín<br>hola@sotobosque.example<br>+00 000 000 000</p>
+        </div>
+        <div>
+          <h2>Privacidad</h2>
+          <p>Esta página no usa cookies ni analítica. El formulario es una demostración: los datos se comprueban en tu navegador y no se envían ni se guardan. Las tipografías se cargan desde Google Fonts y las fotografías desde Unsplash, por lo que tu navegador se conecta a esos servicios.</p>
+        </div>
+        <div>
+          <h2>Sobre este proyecto</h2>
+          <p>Sotobosque es un proyecto conceptual: la marca, la dirección, los precios y los horarios son ficticios. Diseño y desarrollo de WebsoriaStudio. Fotografías de Unsplash, usadas bajo su licencia.</p>
+        </div>
+      </div>
+      <p class="pie-final">© 2026 WebsoriaStudio. Concepto de diseño sin fines comerciales.</p>
+    </div>
+  </footer>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
